@@ -1,0 +1,215 @@
+<html>
+
+<head>
+<title>F.C. Petrolul Ploiesti</title>
+<h1 align="center"><b><font color="yellow">F.C. Petrolul Ploiesti</font></b></h1>
+<img src="logo.png" align="center">
+
+
+<!--CSS-->
+
+<style>
+img{
+    position:relative;
+	right:-710px;
+	top:-40px;
+	}
+
+body{background-image: url("stadion_wall.jpg");
+     background-repeat: no-repeat;
+	 background-size: cover;
+	 }
+
+
+
+
+.parte {
+    margin-bottom: 50px;
+    position: relative;
+    padding-top: 50px; 
+}
+
+#despre {
+    display: none; /* Ascunde div-ul "despre" inițial */
+}
+
+  
+.centrare-text {
+  text-align: center; 
+}
+
+
+<!-- css meniu -->
+
+.fixed-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px; 
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+.fixed-menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.fixed-menu li {
+  margin-bottom: 10px;
+}
+
+.fixed-menu li a {
+  text-decoration: none;
+  color: #333;
+}
+
+ .hamburger {
+    display: inline-block;
+    cursor: pointer;
+    padding: 10px 15px;
+    margin: 10px;
+	position: absolute;
+	top: 40px;
+	left: 0;
+  }
+
+  .hamburger .line {
+    width: 30px;
+    height: 4px;
+    background-color: yellow;
+    margin: 6px 0;
+    transition: transform 0.4s;
+  }
+
+  .hamburger.active .line:nth-child(2) {
+    transform: rotate(45deg);
+  }
+
+  .hamburger.active .line:nth-child(3) {
+    transform: rotate(-45deg);
+  }
+
+  .menu-items {
+    display: none;
+    padding: 10px;
+	position: absolute;
+	top: 40px;
+	left: 30;
+	cursor: pointer;
+  }
+
+  .menu-items.active {
+    display: block;
+  }
+	
+</style>
+
+<!--JavaScrip-->
+
+<script>
+
+function afiseazaDespre() {
+    var despreDiv = document.getElementById("despre");
+    despreDiv.style.display = "block"; // Schimbă vizibilitatea div-ului "despre" la "block"
+	
+	 var divDeAscuns = document.getElementById("meci");
+  divDeAscuns.style.display = "none"; // ascunde urmatorul meci
+}
+
+<!-- meniu -->
+ function toggleMenu() {
+    var menuItems = document.getElementById("menuItems");
+    menuItems.classList.toggle("active");
+  }
+  
+</script>
+
+</head>
+
+
+<body>
+
+ <div class="hamburger" onclick="toggleMenu()">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+  </div>
+
+
+ <div class="menu-items" id="menuItems">
+  <ul>
+    <li class="button" onclick="afiseazaDespre()"><font color="yellow">Despre noi</font></li>
+  </ul>
+</div>
+
+
+<div id="meci">
+<h2 style="color: white;" class="centrare-text">Urmatorul meci:
+</h2>
+
+<h1 style="color: white;" class="centrare-text">
+F.C. Arges - <font color="yellow">F.C. Petrolul Ploiesti</font></h1>
+<p style="color: white;" class="centrare-text">19/05/2023 - Stadion Nicolae Dobrin</p><br>
+<form style="color: white;" class="centrare-text" method="POST" action="procesare_formular.php">
+  <p>Cine va castiga meciul?</p>
+   <div style="display: inline-block; text-align: left;">
+  <input type="radio" id="gazde" name="raspuns" value="F.C. Arges">
+  <label for="optiune1">F.C. Arges</label><br>
+  <input type="radio" id="egal" name="raspuns" value="Egalitate">
+  <label for="optiune2">Egalitate</label><br>
+  <input type="radio" id="oaspeti" name="raspuns" value="F.C. Petrolul">
+  <label for="optiune3">F.C. Petrolul</label><br><br>
+  <input type="submit" value="Raspunde">
+   </div>
+</form>
+
+</div>
+
+
+<div id="despre" class="parte">
+
+<h1 style="color: white;">Istoria Petrolului Ploiesti</h1>
+<p style="color: white;">În istoria de peste 97 de ani a echipei au fost urcușuri și coborâșuri, au fost eșecuri și bucurii, dar, mai ales, multe momente de bucurie pentru fanii petroliști.
+</p>
+<p style="color: white;">Petrolul s-a născut la București în anul 1924, mai precis la finalul acelui an, atunci când, forțate de considerente financiare, cluburile ROMCOMIT și Triumf au fuzionat, semnând, astfel, actul de naștere al uneia dintre cele mai puternice echipe bucureștene din perioada interbelică, JUVENTUS. Tradiția latină cultivată de noul club sportiv era ilustrată și de emblema acestuia, care evoca istoria orașului Roma, cu lupoaica alăptându-i pe Romulus și Remus. Echipa a păstrat culorile fostului club româno-italian (roșu și albastru) și a rămas să joace pe arena „ROMCOMIT”, situată pe locul unde este astăzi Facultatea de Drept și Opera Română, până în strada Vasile Pârvan. Evenimentul fuziunii apare menționat într-un material apărut duminică, 4 ianuarie 1925, în Gazeta Sporturilor, sub titlul: „Juventus – O fuziune senzațională”. Juventus este admisă în campionatul Bucureștiului, categoria Onoare, în 1924 neexistând un campionat național stil divizie. În acel sezon, 1924-25, Romcomit jucase un singur meci, cu CFR București, de care a dispus cu 6-1. Triumf activase în seria B a categoriei Onoare, jucând 5 meciuri din care a câstigat 4, cel mai detașat cu Sportul Studențesc (4-0) și a pierdut unul: 0-1 cu Tricolor București. Toate aceste rezultate se vor anula după fuziune, iar Juventus va juca în primăvara anului 1925 tur-retur cu celelalte 6 echipe din serie și va termina pe locul 4.
+</p>
+<p style="color: white;">A urmat un titlu de vicecampioană și, în 1930, Juventusul, sau Petrolul de astăzi, devine pentru prima ei dată, și singura, campioana Regatului României Mari, o performanță cu care foarte puține echipe aflate și astăzi în activitate se pot mândri. Echipa de atunci a Juventusului va domina fotbalul românesc, chiar dacă nu va reuși să mai caștige vreodată titlul sub această titulatură. Odata cu campionatul mondial din 1938 perioada de glorie a Juventusului pare că se termină și bucureștenii nu mai reușesc decât rezultate sporadice precum un loc 3 în sezonul 1935/36, un loc 4 după război, în 1946/47 și 1947/48. De remarcat, în toți acești ani, este sărbătorirea a 10 ani de la formarea echipei, și faptul că echipa bucureșteană vine să joace și pe noul stadion local din Ploiești. A fost prima apropriere a echipei de orașul aurului negru, marcată printr-o poză de album. Sezonul 1947/48 a fost și cel care a rămas în istorie ca primul în care Juventus nu se mai numea Juventus. Astfel, după 23 de ani în care a purtat numele de Juventus, numele echipei va fi Distribuția (primăvara lui 1948), Petrolul (sezonul 1948-49, când va deveni campioană de juniori a țării), Competrol (toamna lui 1949), Partizanul (în 1950), Flacăra (1951).
+</p>
+<h1 style="color: white;">Echipa se mută la Ploiești</h1>
+<p style="color: white;">Dintre toți jucătorii de atunci ai Juventusului, cei care s-au remarcat cel mai mult au fost: Emerich Vogl, Ștefan Wetzer, Rudy Wetzer, Nicolae Gorgorin, Ilie Oană, Mihai Flamaropol, Coloman Braun Bogdan și Ladislau Raffinsky. Moștenirea Juventusului a fost decisivă în crearea unei noi echipe campioane. Fără a avea în spate această tradiție, Petrolul poate nu ar fi avut niciodată acei 8 ani senzaționali în care va cuceri 3 titluri și o cupă a României.
+Petrolul Ploiești a apărut prin transferul la Ploiești al echipei bucureștene Flacăra, în anul 1952. Ilie Oană, care vine la timona echipei după sfârșitul turului 1952, nu va reuși să salveze echipa de la retrogradare, dar va ajunge în finala Cupei, câștigată cu 2-0 de CCA București.
+Aflată în divizia B, Flacăra va începe modest și va continua “prahovenizarea”. Meciul jucat cu Spartac București va fi pierdut de ploieșteni, dar muștruluiala din presă va da startul unei serii de 9 jocuri câștigate consecutiv, la care Spartac nu va face față.
+Urmează o ascensiune ponderată: locul 7 în 1954, 2 în 1955 (după ce a stat pe primul loc doar o săptămână), locul 5 în 1956.
+Flacăra Ploiești nu a câștigat titlul în 1955, acesta plecând pentru prima dată spre clubul din Șoseaua Ștefan cel Mare, dar echipa ploieșteană începea să fie formată tot mai mult din jucători prahoveni. Pentru titlu ar fi fost suficient ca Flacăra să mai câștige cele două meciuri în deplasare în ultimele două etape, cu Locomotiva Timișoara și Progresul București, dar nu a fost așa. Totuși, a fost pentru prima dată campioană a provinciei, la numai 2 ani după promovarea în divizia A. Apărea, însă, generația de aur, care a dus formația de juniori până în finala pe țară.
+În 1956, Flacăra, devenită Energia, a terminat pe locul 5, la 4 puncte de primul loc și numai 2 de locul 2. Începutul slab, cu 1 punct în 3 meciuri, a fost hotărâtor.
+Campionatul din 1957-58 a avut Petrolul pe locul 8 după 3 etape, cu un singur meci câștigat. Din această etapă, echipa care încă se mai numea Energia, va urca un singur loc în fiecare etapă și la 24.11.1957 Energia era pe primul loc. În decembrie 1957, echipa își schimba numele în Petrolul. Toamna va însemna pentru Petrolul debutul în Cupa Campionilor Europeni, dar campioana Germaniei de Est, Wismut Karl Marx Stadt, s-a dovedit mai puternică. 1958 a fost un an mai puţin fast, echipa terminând turul pe locul 4, dar primele 4 etape din retur îi vor aduce echipei locul 1 și al doilea titlu consecutiv (1958-59).
+</p>
+<h1 style="color: white;">Palmares</h1>
+<p style="color: white;">
+Liga I<br>
+Campionate câștigate (4): 1929-30, 1957-58, 1958-59, 1965-66
+Locul 2 (2): 1955, 1961-62<br><br>
+
+Liga a II-a:<br>
+Campionate câștigate (7): 1954, 1976-77, 1981-82, 1984-85, 1988-89, 2002-03, 2010-11, 2021-2022
+Locul 2 (1): 1980-81<br><br>
+
+Liga a IV-a:<br>
+Locul 1: 2016-2017
+Cupa României – faza județeană Prahova<br><br>
+
+Cupa României:<br>
+Cupe câștigate (3): 1962-63, 1994-95, 2012-13
+Finalistă (1): 1952<br><br>
+
+Supercupa României:<br>
+Finalistă (2): 1995, 2013<br><br>
+
+</div>
+
+
+</body>
+
+</html>
